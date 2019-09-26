@@ -24,17 +24,17 @@ li a:hover:not(.active) {
 	background-color: #ddd;
 	color: black;
 }
-.navbar-nav {
+nav {
   list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-position: fixed;
-width: 100%;
-top: 0;
-background-color: #333;
-font-family: 'Oswald Bold', Oswald, sans-serif; 
-z-index: 300;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #333;
+  font-family: 'Oswald Bold', Oswald, sans-serif; 
+  z-index: 300;
 }
 .active {
 	background-color: #000000;
