@@ -1,0 +1,153 @@
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position: fixed;
+width: 100%;
+top: 0;
+background-color: #333;
+font-family: 'Oswald Bold', Oswald, sans-serif; 
+z-index: 300;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: #ffffff;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: #ddd;
+	color: black;
+}
+.navbar-nav {
+  list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+position: fixed;
+width: 100%;
+top: 0;
+background-color: #333;
+font-family: 'Oswald Bold', Oswald, sans-serif; 
+z-index: 300;
+}
+.active {
+	background-color: #000000;
+  color: white;
+}
+.people {
+	width: inherit;
+	height: inherit;
+}
+
+body{
+   font-family: 'Oswald Bold', Oswald, sans-serif; 
+   width: 100%;
+}
+.slideshow {
+	width: 100%;
+	opacity: 0.5;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.mySlides {display: none;}
+.questions {
+  background-color: #00f2bb;
+  color: #444;
+  cursor: pointer;
+  padding: 18px 18px 18px 50px;
+  padding-left: 10%;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Oswald Bold', Oswald, sans-serif; 
+}
+#about{
+  float:left;
+  padding-left: 10%;
+  padding-top:5%;
+  background-color: white;
+  color:black;
+}
+#Schedule{
+  font-family: 'Oswald Bold', Oswald, sans-serif; 
+  float:right;
+  padding-top: 5%;
+  padding-left: 0%;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  width:100%;
+}
+#faq{
+  width:100%;
+  float: left;
+  margin-top:5%;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  background-color: #00f2bb ;
+  text-align: left;
+}
+.active, .questions:hover {
+  background-color: #92278f;
+  color: white;
+}
+.answers {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  padding-left: 10%;
+}
+.column1 {
+  text-align:center;
+}
+footer{
+	font-family: 'Oswald Bold', Oswald, sans-serif; 
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+video {
+	width: 100%;
+	opacity: 0.7;
+}
+/*Waiver site*/
+.tvchform {
+	padding: 15px 20px;
+	
+}
+a{
+	color: black;
+}
