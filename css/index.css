@@ -1,3 +1,4 @@
+/*
 ul {
 list-style-type: none;
 margin: 0;
@@ -23,7 +24,7 @@ text-decoration: none;
 li a:hover:not(.active) {
 	background-color: #ddd;
 	color: black;
-}
+}*/
 .active {
 	background-color: #000000;
   color: white;
@@ -165,10 +166,17 @@ a:hover{
 .image{
   margin-bottom:5%;
   margin-top: 5%;
+  width: auto;
 }
 .spo{
   padding-top: 5%;
+  padding-bottom: 5%;
+}
+.part {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .sponsors {
   height: 50%;
+  width: 50%;
 }
