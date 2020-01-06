@@ -15,3 +15,28 @@ function slideshow(){
   slides[slideindex-1].style.display = "block";
   setTimeout(slideshow, 5000);
 }
+
+function loggClick(e) {
+  if (!e) e = window.event;
+
+  e.preventDefault();  // cancels the link
+
+  var theLink = this.href;  // stores the link for later
+
+  $.ajax({
+     async: false,
+     type: "POST",
+        url: "Logger.txt", //dynamic url to logging action
+        data: {
+            sid: 'abc123' //random data
+        },
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        cache: false,
+         complete: function() {
+           // navigate when the log completes
+           this.location.href = theLink;
+         }
+    });
+    return true;
+  }
+}
