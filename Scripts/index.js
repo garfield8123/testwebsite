@@ -26,7 +26,7 @@ function loggClick(e) {
   $.ajax({
      async: false,
      type: "POST",
-        url: "Logger.txt", //dynamic url to logging action
+        url: "./Logger.txt", //dynamic url to logging action
         data: {
             sid: 'abc123' //random data
         },
