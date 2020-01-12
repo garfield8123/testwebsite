@@ -17,3 +17,7 @@ jobs:
 
     - name: Build
       run: npm build
+    
+    - name: continuous
+      env:
+        CI: true
