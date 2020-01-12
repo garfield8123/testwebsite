@@ -17,7 +17,6 @@ jobs:
 
     - name: Build
       run: npm build
-    
-    - name: continuous
-      env:
-        CI: true
+      
+    - name: Node App Helper Actions
+      uses: guahanweb/action-nodejs-gh-pages@1.0.0
