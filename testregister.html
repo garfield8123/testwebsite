@@ -1,0 +1,773 @@
+
+
+
+<!DOCTYPE html>
+<html class="bm-full-page" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-rootUrl="/22971/">
+    <head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3a4d447407","applicationID":"52978403,52978404,6536002","transactionName":"ZlNQMhAFVxJTV0FcDV8ZfzAhS3sOXV94UFZ9V1wCCwpeMVNTUEYhXlhGFA0IVQRAG3ZaF0NFVxUuBVcFW1pSZQNWUw==","queueTime":0,"applicationTime":182,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYHUF5UDRAFVlhVDwUHVQ==",licenseKey:"3a4d447407",applicationID:"52978403"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(18),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=f(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=u(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=f(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=u(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HACKATHON 2020</title>
+
+    <meta property="og:title" content="HACKATHON 2020" />
+    
+
+<link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/compass/css/BookMe/BookMe4-Theme.css?01230607" type="text/css" />
+<link href="https://cityofpleasanton.perfectmind.com/Content/jQueryUI/ui-lightness/jquery-ui-1.8.17.custom.css?01230607" type="text/css" rel="stylesheet" />
+
+<link href="https://cityofpleasanton.perfectmind.com/Content/Kendo/kendo.common.min.css?01230607" rel="stylesheet" type="text/css" />
+<link href="https://cityofpleasanton.perfectmind.com/Content/Kendo/kendo.bootstrap.min.css?01230607" rel="stylesheet" type="text/css" />
+<link href="https://cityofpleasanton.perfectmind.com/Content/Fonts/BookMe/styles.css?01230607" rel="stylesheet" type="text/css" />
+<link href="https://cityofpleasanton.perfectmind.com/Content/Fonts/FontAwesome/css/font-awesome.min.css?01230607" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/compass/css/BookMe/BookMe4-Embed.css?01230607" type="text/css" />
+<link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/compass/css/BookMe/BookMe4-CoursesClasses.css?01230607" type="text/css" />
+<link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/lightbox.css?01230607" type="text/css" />
+<link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Scripts/malihuScrollbar/jquery.mCustomScrollbar.css?01230607" type="text/css" />
+
+
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/jQueryCore/jQueryCoreMin.js?01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/jQueryCore/jquery-migrate-1.2.1.min.js?01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/jQueryUi/jQueryUi.min.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/Kendo/kendo.all.min.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/Kendo/kendo.aspnetmvc.min.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/MicrosoftAjax.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/MicrosoftMvcAjax.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/MicrosoftMvcValidation.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/perfectMind/PMCommonHeadLoadingFull.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/perfectMind/PMCommonFull.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/Kendo/kendo.all.min.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/utils/json2min.js??01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/perfectMind/ByPassLinkManager.js?01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/malihuScrollbar/jquery.mCustomScrollbar.concat.min.js?01230607" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var require =
+    {
+        baseUrl: 'https://cityofpleasanton.perfectmind.com/Scripts/perfectMind',
+        paths: {
+            "linq": "https://cityofpleasanton.perfectmind.com/Scripts/linq.min.js?v=01230607",
+            "knockout": "https://cityofpleasanton.perfectmind.com/Scripts/knockout-3.3.0.js?v=01230607",
+            "timepicker": "../jquery.timepicker.min",
+            "kendo-all": ".https://cityofpleasanton.perfectmind.com/endo/kendo.all.min.js??01290701",
+            "kendo.timezones.min": "../Kendo/kendo.timezones.min",
+            "PlannerUtility": "planner/PlannerUtility",
+            "CommonBindings": "planner/CommonBindings",
+            "PlannerFilter": "planner/PlannerFilter",
+            "PlannerEvent": "planner/PlannerEvent",
+            "PlannerAttendance": "planner/PlannerAttendance",
+            "PerfectScanAutoComplete": "../Attendance/PerfectScanAutoComplete",
+            "ItemDiscountEditViewUI": "discount/ItemDiscountEditViewUI",
+            "ItemDiscountDetailViewUI": "discount/ItemDiscountDetailViewUI",
+            "DiscountEditViewUI": "discount/DiscountEditViewUI",
+            "DiscountDetailViewUI": "discount/DiscountDetailViewUI",
+            "managePickList": "managePickList",
+            "classPage": "../Attendance/ClassPage",
+            'activitySearch': '../BookMe4/activity.search',
+            'courses-booking': '../BookMe4/Controllers/CourseBookingController',
+            'startpage': '../BookMe4/Controllers/StartPageController',
+            'searchPage': '../BookMe4/Controllers/BookMe4SearchController',
+            'BookMeConstants': '../BookMe4/constants',
+            'FacilityList': '../Bookme4/Controllers/FacilityListController',
+            'FacilityLandingPageController': '../BookMe4/Controllers/FacilityLandingPageController',
+            'FacilityResponsivenessHelper': '../BookMe4/FacilityResponsivenessHelper',
+            'ScrollableMainMenu': '../BookMe4/ScrollableMainMenu',
+            'FacilityMap': '../BookMe4/Controllers/FacilityMapController',
+            'custom-booking-online': '../BookMe4/Controllers/CustomBookingController',
+            'custom-booking-online-service': '../BookMe4/Services/CustomBookingService',
+            'custom-booking-online-models': '../BookMe4/Models/CustomBookingModels',
+            'BookMe4SearchHelper': '../BookMe4/BookMe4SearchHelper',
+            'BookMe4AttendanceHeader': '../BookMe4/BookMe4AttendanceHeader',
+            'BookMe4CartV2Controller': '../BookMe4/Controllers/BookMe4CartV2Controller',
+            'BookMe4CartService': '../BookMe4/Services/BookMe4CartService',
+            'CartItemHelper': '../BookMe4/Helpers/CartItemHelper',
+            'BreadcrumbsController': '../BookMe4/Controllers/BreadcrumbsController',
+            'StartPageV2Controller': '../BookMe4/Controllers/StartPageV2Controller',
+            'text': '../requireModules/text',
+            'Masonry': '/Scripts/masonry.pkgd.min.js?01230607',
+            'FilterViewModelBase': '../BookMe4/Components/FilterViewModelBase',
+            'EmptyFilter': '../BookMe4/Components/EmptyFilter',
+            'MultiSelectFilter': '../BookMe4/Components/MultiSelectFilter',
+            'LocationMultiSelectFilter': '../BookMe4/Components/LocationMultiSelectFilter',
+            'FilterSelector': '../BookMe4/Components/FilterSelector',
+            'FilterManager': '../BookMe4/Components/FilterManager',
+            'FiltersCommunicationManager': '../BookMe4/Components/FiltersCommunicationManager',
+            'SearchByKeywordFilter': '../BookMe4/Components/SearchByKeywordFilter',
+            'DaysOfWeekFilter': '../BookMe4/Components/DaysOfWeekFilter',
+            'DateRangeFilter': '../BookMe4/Components/DateRangeFilter',
+            'AgeFilter': '../BookMe4/Components/AgeFilter'
+        },
+        urlArgs: "v=01230607"
+    };
+</script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/require.js?01230607" type="text/javascript"></script>
+<script src="https://cityofpleasanton.perfectmind.com/Scripts/LazyLoader.js?01230607" type="text/javascript"></script>
+
+
+    <style type="text/css">
+        .similar-row {
+            display: none;
+        }
+
+        #load-more {
+            float: right;
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/compass/css/base.css?01230607" type="text/css" />
+    <link rel="stylesheet" href="https://cityofpleasanton.perfectmind.com/Content/compass/css/BookMe/BookMe4-System.css?01230607" type="text/css" />
+
+    <!--This style needs to be placed here for proper Google Maps rendering.-->
+    <style type="text/css">
+        #map-canvas img {
+            min-width: 0;
+            max-width: none;
+            max-height: none;
+        }
+    </style>
+
+
+        <link href="https://cityofpleasanton.perfectmind.com/Content/sitebase1.css?01230607" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://cityofpleasanton.perfectmind.com/Content/Planner2/PlannerAddin.css" />
+    </head>
+    <body>
+        <input type="hidden" id="siteAnchor" value="/22971/" />
+        <div id="temp_wrapper" style="position: fixed;top:0px;left:0px;height: 100%;width:100%;background-color: white;z-index: 100000"></div>
+        <ul id="bypass-link-list">
+            <li class="bypass-link-item">
+                <a id="main-content-link" class="bypass-link" href="#main-content" tabindex="1">
+                    <div class="link-content">Skip to main content</div>
+                </a>
+            </li>
+        </ul>
+        
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e2a0b2a5d3a81b9" async="async"></script>
+    <script src="https://cityofpleasanton.perfectmind.com/Scripts/Kendo/kendo.PmDialog.js?01230607" type="text/javascript"></script>
+<script type="kendo-template" id="book-button">
+
+    <a class="bm-button bm-book-button" href="https://cityofpleasanton.perfectmind.com/22971/Clients/BookMe4LandingPages/CoursesLandingPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406&embed=False&redirectedFromEmbededMode=False&courseId=d7c43d76-0e19-49a4-a44c-e8947637751c" aria-label ="Register HACKATHON 2020" target="_blank">
+    Register
+    </a>
+    <div id="registrationRestrictionAlertPopup">
+        <span class="close-button"><em class="fa fa-times" aria-hidden="true"></em></span>
+    </div>
+
+</script>
+
+<div class="bm-content-wrapper bm-course-page bm-landing-page">
+    
+    <div class="bm-course-details">
+         <section>
+             
+    <div class="bm-course-prices" tabindex="0">
+        <em class="" aria-hidden="true"></em>
+        <h3 class="fees-header">Fees</h3>
+        
+        <table>
+            
+                <tr>
+                    <td>Resident</td>
+                    <td>
+                        <div class="bm-price-tag">Free</div>
+                        
+                    </td> 
+                </tr>               
+            
+                <tr>
+                    <td>Non-Resident</td>
+                    <td>
+                        <div class="bm-price-tag">Free</div>
+                        
+                    </td> 
+                </tr>               
+            
+        </table>
+    </div>
+   
+             <div class="bm-course-days" tabindex="0">
+                <em class=""></em>
+                  
+                      <h3>Course Dates</h3> 
+                  
+                <table>
+                    <tr>
+                    <td>1 sessions </td> 
+                    <td>Once</td>
+                    </tr>
+                </table>
+                <div class="k-widget k-grid" id="SimilarEventsGrid"><table><colgroup><col /><col /><col /></colgroup><thead class="k-grid-header"><tr><th class="k-header" data-field="UserDate" data-index="0" data-title="Date" scope="col"><span class="k-link">Date</span></th><th class="k-header" data-field="StartAndEndTime" data-index="1" data-title="Duration" scope="col"><span class="k-link">Duration</span></th><th class="k-header" data-field="Facility" data-index="2" data-title="Facility" scope="col"><span class="k-link">Facility</span></th></tr></thead><tbody><tr class="similar-row"><td aria-label="2-15-2020">2/15/20</td><td>12:00 PM - 12:00 PM</td><td aria-label="Location ">&nbsp;</td></tr></tbody></table></div><script>
+	jQuery(function(){jQuery("#SimilarEventsGrid").kendoGrid({"columns":[{"title":"Date","headerAttributes":{"data-field":"UserDate","data-title":"Date"},"field":"UserDate","encoded":true},{"title":"Duration","headerAttributes":{"data-field":"StartAndEndTime","data-title":"Duration"},"field":"StartAndEndTime","encoded":true},{"title":"Facility","headerAttributes":{"data-field":"Facility","data-title":"Facility"},"field":"Facility","encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"autoBind":false,"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-server']){return 'aspnetmvc-server';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":""},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"UserDate":{"editable":false,"type":"string"},"UserTime":{"editable":false,"type":"string"},"DayOfWeek":{"editable":false,"type":"string"},"DayOfWeekShort":{"editable":false,"type":"string"},"DurationInMinutes":{"type":"number"},"AllDayEvent":{"type":"boolean"},"StartAndEndTime":{"editable":false,"type":"string"},"Location":{"type":"string"},"Facility":{"type":"string"},"LocationAndFacility":{"editable":false,"type":"string"},"Date":{"editable":false,"type":"date"}}}}}});});
+</script>
+                <a href="javascript:void(0);" id="load-more" class="bm-box-title" aria-label="To load more sessions press enter button.">Load more...</a>
+             </div>           
+        </section>
+        <section class="bm-course-about">
+            <em class=""></em>
+            <div tabindex="0">
+                <h3>About this course</h3>
+            
+            <p class="bm-course-about-descr">The event is a 24-hour hackathon or coding competition where high school students can create whatever they would like from simple HTML websites to complex video games or apps. Participants can win prizes after review from a panel of judges. This event is FREE. There will be free food, free drinks, games and more prizes.
+
+Participants must bring their own laptops, sleeping bag, pillow and toiletries.
+
+This is a &#39;lock-in&#39; event. Participants will not be dismissed until 12 p.m. February 16, 2020 or unless their parents or guardians come an pick them up. </p>
+            </div>            
+            <table tabindex="0">
+                <tr class="bm-location-map"></tr>
+
+                
+                <tr>
+                    <td>Course ID</td>
+                    <td>00018868</td> 
+                </tr>
+                 
+            </table>
+            
+            
+<div class="bm-course-instructor" tabindex="0">
+    <em class="" aria-hidden="true"></em>
+    <h3>Instructor</h3>
+    <div class="bm-teacher-bio">
+        
+        <h4>Julian Mireles</h4>
+        <div id="description" title=''></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var description = "";
+    var maxNumberOfCharsToShow = 1500;
+    description = description.length > maxNumberOfCharsToShow ? description.substring(0, maxNumberOfCharsToShow).concat('...') : description;
+    $("#description").html(description);
+</script>
+
+            <div class="bm-course-restrictions" tabindex="0">
+                <em class=""></em>
+                <h3>Restrictions</h3>
+                <table>
+                    
+                    <tr>
+                    <td>Gender</td>
+                    <td>Co-ed</td> 
+                    </tr>
+                    
+                    <tr>
+                    <td>Age Restriction</td>
+                    <td>14 to 18</td> 
+                    </tr>
+                    
+                </table>
+            </div>
+            
+        </section>
+    </div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div style="display: none">
+        
+    </div>
+</div>
+
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDkrPPJ4JIiImcmu_bnf2Vqy3TQVkjB8Q8" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function renderAdress(location, address, hasAlternativeLocation, alternativeLocation) {
+        var obj = $.extend(true, {}, { Location: location, HasAlternativeLocation: hasAlternativeLocation, AlternativeLocation: alternativeLocation }, address);
+        return kendo.Template.compile($('#booking-event-address').html())(obj);
+    }
+    function renderRestriction(label, data) {
+        return kendo.Template.compile($('#booking-event-restriction').html())({ Label: label, data: data });
+    }
+</script>
+
+<script type="kendo-template" id="booking-event-info">
+<div class="bm-course-primary-content">
+    #if (BackAction.Url != "") {#
+        <a class="bm-button bm-back-button" role="link" href=" #: BackAction.Url # ">
+        <em class="bmf-left-open" aria-hidden="true"></em><span>Back</span></a>
+    # } #
+    <div class="bm-course-primary-inner">
+        
+        <section class="event-info-column">
+            <h1 class="bm-course-primary-event-name bm-event-name-h1" title="#: EventName #" tabindex="0">#: EventName #</h1>
+                # if (BookingType == 4 ) { # 
+                    <span class="bm-facility-program-name">#: ProgramName #</span> 
+                # } #
+            # if(CalendarOvernightReservations && ProgramUseCheckInOut ) { #
+                <label><em class="bmf-calendar" aria-label="Event range, "></em><span>#: StartDate # #: StartTime # until #: EndDate # #: EndTime # </span></label>
+            # } else { #
+            <label><em class="bmf-calendar" aria-hidden="true"></em><span aria-label="Event date - #: FormattedFullStartDate ##if (StartDate != EndDate) {# untill #: FormattedFullEndDate ##}# ">#: StartDate ##if (StartDate != EndDate) {# - #: EndDate ##}#</span></label>
+            # if(!CalendarOvernightReservations || ProgramUseCheckInOut || StartDate == EndDate) { #
+                <label><em class="bmf-clock" aria-hidden="true"></em><span aria-label="Event time - #: EventTimeWordDescription #">#: EventTimeDescription #</span></label>
+                # } #            
+            # } #
+            # if(Spots) { #
+                <label class="spots"><em class="bmf-user" aria-hidden="true"></em><span>#: Spots #</span></label>
+            # } #
+        </section>
+    
+       <section class="bm-booking-info bm-restrictions">
+            # var displayAtLeastOneRestriction = ((!DisplaySettings || DisplaySettings.DisplayGenderRestrictions) && GenderRestrictions) ||
+                                                 ((!DisplaySettings || DisplaySettings.DisplayAgeRestrictions) && AgeRestrictions) ||
+                                                 ((!DisplaySettings || DisplaySettings.DisplayRankRestrictions) && RankRestrictions) ||
+                                                 PrerequisiteEvents;  
+            if(displayAtLeastOneRestriction) { # 
+            <div class="common-restrictions" tabindex="0">
+                    <div class="registration-info-header">Restrictions</div>
+                 # if ((!DisplaySettings || DisplaySettings.DisplayGenderRestrictions) && GenderRestrictions) { # 
+                    <div class="registration-info-text">Gender: #= GenderRestrictions #</div>
+                 # } # 
+
+                 # if ((!DisplaySettings || DisplaySettings.DisplayAgeRestrictions) && AgeRestrictions) { #
+                    <div class="registration-info-text">Age: #= AgeRestrictions #</div>
+                 # } #
+
+                 # if ((!DisplaySettings || DisplaySettings.DisplayRankRestrictions) && RankRestrictions) { #
+                    <div class="registration-info-text">Rank: #= RankRestrictions #</div>
+                 # } #
+                # if (PrerequisiteEvents) { #
+                        <div id="displayPrerequisiteEvents" class="registration-info-text" role="button">Prerequisite Events: <span class="underlinePointer" aria-haspopup="dialog" role="button">
+                        #= PrerequisiteEvents # Event(s)</span></div>                                        
+                # } #
+              
+            </div>
+            # } #
+
+
+        # if (DisplayRegistrationDatesSection) { # 
+
+            <div class="registration-restrictions">
+                <div class="registration-info-header">Registration Dates</div>
+            
+                # if (MembersRegistrationDate) { # 
+                     <div class="registration-info-text" aria-label="For members #= FormattedMembersRegistrationDate #">Members: #= MembersRegistrationDate #</div>
+                # } #
+                # if (ResidentsRegistrationDate) { #
+                     <div class="registration-info-text" aria-label="For residents #= FormattedResidentsRegistrationDate #">Residents: #= ResidentsRegistrationDate #</div>
+                # } #
+                # if (PublicRegistrationStartDate) { #
+                     <div class="registration-info-text" aria-label="For public #= FormattedPublicRegistrationStartDate #">Public: #= PublicRegistrationStartDate #</div>
+                # } #  
+    
+            <div>
+
+        # } else { #
+
+            <br/>
+            <br/>
+            <br/>
+
+            <div class="registration-common-info" aria-label="#: FormattedRegistrationInfo #">
+                <div >#: RegistrationInfo #</div>
+            </div>
+        # } # 
+        <section>
+    </div>
+</div>
+</script>
+<script type="kendo-template" id="booking-appointment-info">
+<div class="bm-course-primary-content booking-appointment">
+    <img class="landing-page-bg" src="https://cityofpleasanton.perfectmind.com/Content/Images/landing-page-bg.jpg" alt="Header photo" />
+    <div class="booking-appointment-details">
+        #if (BackAction.Url != "") {#
+            <a class="bm-button bm-back-button" href=" #: BackAction.Url # ">
+            <em class="bmf-left-open" aria-hidden="true"></em><span>#: 'Back to Event' #</span></a>
+        # } #
+
+        <div class="bm-course-primary-inner">
+            <section class="event-info-column">
+                <h1 class="bm-course-primary-event-name" title="#: ProgramName #">#: ProgramName #</h1>
+            </section>
+
+            <section class="bm-booking-info">            
+                <div class="common-restrictions">
+                    #= renderRestriction('Gender', GenderRestrictions) #
+                    #= renderRestriction('Age', AgeRestrictions) #
+                    #= renderRestriction('Rank', RankRestrictions) #
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="facility-landing-page-event-template" type="text/x-kendo-template">
+        # var infoAndAvailabilty = onlineOption == onlineOptions.ShowFacilityInfoAndAvailability; 
+        var cssClasses = "k-event-template facility-booking-slot";
+        if (isPlaceholder) cssClasses += " placeholder-event";
+        if (isDisabled || infoAndAvailabilty) cssClasses += " disabled-event";
+        if (isAllDay) cssClasses += " all-day";
+        #
+        <div class="#: cssClasses #">
+            <div>
+                <span title="#: timeText #">#: title #</span>
+            </div> 
+        </div>        
+</script>
+
+<script type="kendo-template" id="booking-event-location">
+    #= renderAdress(Location, Address, HasAlternativeLocation, AlternativeLocation) #
+</script>
+<script type="kendo-template" id="booking-event-restriction">
+    # if(data){ #
+        <div>#: Label #: #: data #</div>
+    # } #
+</script>
+<script type="kendo-template" id="booking-event-logo">
+<div class="bm-org-header">
+    <img src="#: OrgLogo #" alt="PerfectMind Logo" aria-hidden="true"/>
+    <div class="bm-org-name">   
+        # if(!OrgIsSingleLocation){ #           
+            <h4># if(BookingType == 4){ # #: OrgName # # } else { # #: Location # #}#</h4>
+        # } else { #
+            <h4>#: OrgLegalName #</h4>            
+        # } #
+    </div>
+    <div id="google_translate_element" style="position:absolute; right: 400px;"></div>
+</div>
+</script>
+<script type="kendo-template" id="booking-event-logo-address">
+    # if(!!Address) { #
+        <div id="bm-org-address" >
+            # if(Address.Street != ""){ #
+                    <span>#: Address.Street #,</span>
+            # } #
+                # if(Address.City != ""){ #
+                    <span>#: Address.City #,</span>
+            # } #
+            # if(Address.Country != ""){ #
+                    <span>#: Address.Country #,</span>
+            # } #
+            # if(Address.PostalCode != ""){ #
+                    <span>#: Address.PostalCode #</span>
+            # } #
+        </div>
+    # } #
+</script>
+
+<script type="kendo-template" id="booking-event-address">
+    # var addressDescription = HasAlternativeLocation ? AlternativeLocation : (AddressTag != null ? AddressTag : Location);
+        if(!HasAlternativeLocation){
+            if (!!Street) addressDescription += ", street " + Street;
+            if (!!City) addressDescription += ", city " + City;
+            if (!!Country) addressDescription += ", country " + Country;
+            if (!!PostalCode) addressDescription += ", postalCode " + PostalCode;
+        }        
+    #
+    <td style='width: 75%;' aria-label="Event Location">#= HasAlternativeLocation ? "Event Location: " + AlternativeLocation : (AddressTag != null ? AddressTag : Location) #</td>
+    <td style='vertical-align:top;'>
+        <span id="show-location-popover" class="bm-popover-link" tabindex="0" aria-label="Show event location on map" role="button" aria-haspopup="dialog">Show Map</span>
+        <div id="location-popover-container" class="bm-popover-container" role="dialog" tabindex="0">
+            <em class="bmf-cross" aria-hidden="true" role="button"></em>
+            <div id="map-canvas" class="bm-map-canvas"></div>
+            <div class="bm-map-address">#= HasAlternativeLocation ? AlternativeLocation : (AddressTag != null ? AddressTag : Location) #</div>
+            # if(!HasAlternativeLocation){ #
+                <div>#: Street #</div>
+                <div>#: City #, #: Country #, #: PostalCode #</div>
+            # } #
+
+            <div class="bm-map-address">Get Direction From:</div>
+            <div class="bm-location-popover-dest">
+                <label for="directionDestination" class="hidden-label">Enter the direction from</label>
+                <input id="directionDestination" name="directionDestination" class="pm-text-input" role="texbox"></input>
+                <span id="calculateDirectionButton" class="bm-button" aria-label="Calculate direction" role="button" tabindex="0">Calculate</span>
+            </div>
+        </div>
+    </td>
+
+</script>
+<script type="text/template" id="facility-list-filterblock-template">
+    <a class="clear-filter-block" href="javascript:;" data-bind="click: resetCallback, visible: resetVisible, attr: { 'aria-label': 'Clear selected ' + filterBlockName + ' filter' }, event: { keydown: resetCallbackOnKeyPress }" role="button">Clear</a>
+    <ul class="padding-bottom" data-bind="foreach: itemsToShow">
+        <li data-bind="visible: isVisible">
+            <input class="pm-checkbox-blue" type="checkbox" role="checkbox"
+                data-bind="attr: { 'data-value': ID, 'id': 'id' + ID, 'data-text': Name, value: ID, name: $parent.inputName },
+                event: { change: $parent.filterChangeCallback }"/>
+            <label data-bind="attr: { 'for': 'id' + ID }, text: Name"></label>
+        </li>
+    </ul>
+    <a href="javascript:;" class="show-more-toggle" data-bind="click: onShowMoreClick, text: showMoreText, visible: showMoreVisible, attr: { 'aria-expanded': showAll() ? 'true' : 'false' }, event: { keydown: onShowMoreKeyPress }" role="button"></a>
+</script>
+<script type="text/x-kendo-template" id="facilityTemplate">
+    #
+    var linkText = (OnlineOption == bookMeConstants.OnlineOption.ShowFacilityInfo.Id) ? 'Information' : 'Choose';
+    #
+	<div class="facility-item" data-facilityId="#: ID #" tabindex="0">
+        <div class="desktop-details-wrapper">
+            #if (showAvailabilityIndicator){ #
+                <div class="desktop-details-availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>                
+                </div>
+            # } #
+            #if (IsFacilityMap) { #
+                <a onclick="onChooseClick(this, #: IsFacilityMap #); return false;" data-facilityId="#: ID #" 
+                    class="pm-confirm-button desktop-details" role="link" aria-label="Choose #: Name # facility map" tabindex="0" href="javascript:void(0);">Choose</a>            
+            # } else { #
+                <a onclick='onChooseClick(this, #: IsFacilityMap #); return false;' data-facilityId="#: ID #" 
+                    class="pm-confirm-button desktop-details" role="link" aria-label="#: linkText + ' ' + Name # facility" tabindex="0" href="#: onClickActionGoToLandingPage(ID) #">#: linkText #</a>            
+                #if(OnlineOption == bookMeConstants.OnlineOption.AllowReservationWithApproval.Id) { #
+                    <span class="desktop-details-hint">Requires Approval</span>
+                # } #
+            # } #
+        </div>
+        #if(!Image) { 
+            Image = "https://cityofpleasanton.perfectmind.com/Content/Images/ControlIcons/noimage.png";
+        } #
+        <img class="facility-image" src="#: Image #" alt="#: Name # facility photo"/>
+		<div class="facility-details">				
+			<h2>#: Name # #if (IsFacilityMap) { # (#: MapFacilitiesCount # Facilities) # } #</h2>
+            # if(FacilityType && !IsFacilityMap){ #
+			    <span class="facility-type facility-tag">#: FacilityType #</span>
+            # } #			
+			<div id="facilityDescriptionUniqueId-#: uid #" class="facility-description truncated">#: Description #</div>
+            <a href="javascript:void(0);" class="read-more-toggle" aria-controls="facilityDescriptionUniqueId-#: uid #" aria-expanded="false" role="button">Read more</a>
+    
+            <span class="facility-location" data-bind="visible: !isSingleLocationOrganization()"><span style="font-weight: 600;">Location: </span>#: LocationName #</span>
+            # if (Amenities.length > 0) { #
+                <span class="facility-amenities"><span style="font-weight: 600;">Amenities: </span>#: joinedAmenities #</span>
+            # } #	
+		</div>
+        <div class="tablet-details-wrapper">
+            #if (showAvailabilityIndicator){ #
+                <div class="tablet-details-availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>                
+                </div>
+            # } #
+            #if (IsFacilityMap) { #
+                <a onclick="onChooseClick(this, #: IsFacilityMap #); return false;" data-facilityId="#: ID #"
+                    class="pm-confirm-button tablet-details" href="javascript:void(0);" tabindex="0">Choose</a>            
+            # } else { #
+                <a onclick='onChooseClick(this, #: IsFacilityMap #); return false;' data-facilityId="#: ID #" 
+                    class="pm-confirm-button tablet-details" href="#: onClickActionGoToLandingPage(ID) #" tabindex="0">#: linkText #</a>            
+                #if(OnlineOption == bookMeConstants.OnlineOption.AllowReservationWithApproval.Id) { #
+                    <span class="tablet-details-hint">Requires Approval</span>
+                # } #
+            # } #
+        </div>
+	</div>
+</script>
+<script type="text/x-kendo-template" id="successfulAlertTemplate">        
+    <div class="popup-first-user-login-alert-message"> 
+        <i class="fa fa-times fa-lg" aria-hidden="true"></i>                   
+        <p>#= message #</p>
+    </div>            
+</script>
+<script type="text/x-kendo-template" id="notificationTemplate">        
+    <div class="notification-message" role="dialog">
+            #= message #
+    </div>            
+</script>
+<script type="text/x-kendo-template" id="facilityMapPinToolTipTemplate">        
+    <div class="facility-texts-block">
+        <div class="facility-head">
+            <img class="facility-image" src="#: Image #" alt="#: Name # facility photo" aria-hidden="true"/>
+            <div class="name-wrapper">
+                <div class="facility-name ellipsis">#: Name #</div>
+                # if (!!FacilityType) { #
+                    <div class="facility-type ellipsis">#: FacilityType #</div>
+                # } #
+                # if (!!Address) { #
+                    <div>#: Address.Street + ',' + Address.City + ',' + Address.PostalCode #</div>
+                # } #
+            </div>
+        </div>
+        # if (!!Description) { #
+            <div class="description-info">
+                <div class="facility-description truncated">#: Description #</div>
+                <a href="javascript:;" class="read-more-toggle" aria-expanded="false" role="button">read more</a>
+            </div>
+        # } #
+        # if (Amenities.length > 0) { #
+            <span class="facility-amenities">Amenities: <span style="font-weight: 600;">#: joinedAmenities #</span></span>
+        # } #
+        # for (var i in OptionalDetails) { #
+            <div style="display: block" class="detail-wrapper">#: i #: <span style="font-weight: 600;">#: OptionalDetails[i] #</div></span>
+        # } #
+        # if (!!CheckInTime) { #
+            <div style="display: block" class="detail-wrapper">Check in: <span style="font-weight: 600;">#: CheckInTime #</div></span>
+        # } #
+        # if (!!CheckOutTime) { #    
+            <div style="display: block" class="detail-wrapper">Check out: <span style="font-weight: 600;">#: CheckOutTime #</div></span>
+        # } #
+        # if (!!PriceDetails) { # 
+            <div style="display: block" class="detail-wrapper">#: PriceDetails #</div>
+        # } #
+        <div>
+            #if (showAvailabilityIndicator){ #
+                <div class="availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>                
+                </div>
+            # } #
+            <a class="pm-confirm-button" onclick='onChooseClick(this); return false;' data-facilityId="#: FacilityId #"
+                href="#: onClickActionGoToLandingPage(FacilityId) #" role="link" tabindex="0">Choose</a>
+        </div>
+    </div>              
+</script>
+<script id="notQualifiedMemberNotificationTemplate" type="text/x-kendo-template">
+    <div class="not-qualified-member-notification" role="alert">
+        <span class="exclamation-mark-icon"></span>
+        <div class="text">
+            <h3>#= title #</h3>
+            <p>#= message #</p>
+        </div>
+    </div>
+</script>
+<script id="selectAttendeeNotificationTemplate" type="text/x-kendo-template">
+    <div class="select-attendee-notification" role="alert">
+        <span class="exclamation-mark-icon"></span>
+        <h3>#= message #</h3>
+    </div>
+</script>
+    <script type="text/javascript">
+        function decodeEncodedValue(value) {
+            var decodedValue = $('<div/>').html(value).text();
+            return decodedValue;
+        }
+
+        $(window).on("holdsTrackerPopupVisibilityChanged", function () {
+            $('.bm-booking-info.bm-restrictions').toggleClass("bm-holds-tracker");
+        });
+
+        function showMore(skip) {
+            var items = $('#SimilarEventsGrid').find('tbody tr').not(".k-no-data").slice(skip, skip + 10);
+
+            itemsLoaded += items.length;
+
+            if (allItemsCount - itemsLoaded == 0) {
+                $('#load-more').hide();
+            }
+
+            $(items).each(function (index, item) { $(item).removeClass('similar-row'); });
+            $(items).each(function (index, item) { $(item).removeClass('similar-row'); });
+        }
+
+        var eventInfo = $.extend(true, {}, {
+            BackAction: {
+                Url: 'https://cityofpleasanton.perfectmind.com/22971/Clients/BookMe4BookingPages/BookingCoursesPage?widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026calendarId=b7cb24f0-3c87-40e2-b6d4-ee6499127dd0\u0026singleCalendarWidget=False',
+                Name: 'Back'
+            }
+        }, {"ParentEventId":null,"FakeEventId":null,"RecordName":"31078","CalendarId":"b7cb24f0-3c87-40e2-b6d4-ee6499127dd0","CalendarOvernightReservations":false,"ServiceDurationId":null,"WidgetId":"15f6af07-39c5-473e-b053-96653f77a406","RegFormId":"bc7567ec-fbb0-4867-ace1-6d03c1d49811","ImageUrl":"","ProgramId":"13e85ae6-0257-4ad5-a730-3ff1b9a9be1a","ProgramDescription":"","ProgramName":"Special Interest","ProgramImageUrl":"//az12497.vo.msecnd.net/98b40adca4fb480b8eb6c883e3e7ae47/images/218/14ca375cd1ad4a9199597385310f4264.jpg","ProgramUseCheckInOut":false,"EventTimeWordDescription":"12 o\u0027clock PM to 12 o\u0027clock PM","SessionName":"","StartDate":"2/15/20","StartDateWithOffset":"2020-02-15T12:00:00-08:00","PublicRegistrationStartDate":null,"FormattedPublicRegistrationStartDate":null,"PublicRegistrationStartDateValue":"2019-12-06T08:00:00","PublicRegistrationStartDateWithOffset":null,"ResidentsRegistrationDate":"","FormattedResidentsRegistrationDate":null,"ResidentsRegistrationDateWithOffset":null,"ResidentsRegistrationDateValue":"2019-12-06T08:00:00","MembersRegistrationDate":"","FormattedMembersRegistrationDate":null,"MembersRegistrationDateWithOffset":null,"MembersRegistrationDateValue":"2019-12-06T08:00:00","FormattedFullStartDate":"February 15th, 2020","StartTime":"12:00 PM","StartDay":"Saturday","EndDate":"2/16/20","EndDateWithOffset":"2020-02-16T12:00:00-08:00","FormattedFullEndDate":"February 16th, 2020","EndTime":"12:00 PM","AppointmentStartDateTimeTicks":0,"ActualLocation":"Senior Center","LocationId":"92087386-9f64-4910-9e22-4eaa3bbcf494","AgeRule":2,"AgeRuleSpecificDate":"2017-02-23T00:00:00","Restrictions":"Gender - Co-ed; Age - 14 to 18; Rank -  Prerequisite Events - 0","DisplayableRestrictions":"14 to 18, Co-ed","SpotsLeft":13,"RegistrationInfo":"Registration ends on 2/15/20 at 01:00 PM","FormattedRegistrationInfo":"Registration ends on February 15th, 2020 at 01:00 PM","IsRegistrationClosed":false,"IsFutureRegistration":false,"AnyRegistrationDateInFuture":false,"RegistrationEndDateInEventTimeZone":"2020-02-15T13:00:00","FormattedRegistrationEndDate":"2/15/20 at 01:00 PM","IsWaitListAvailable":false,"IsWaitListFull":false,"IsWaitListHasSpots":false,"IsFull":false,"Color":16750362,"FacilityId":null,"FacilityContractId":null,"FacilityOnlineOption":0,"FacilitySupervisorEmails":"","Assistants":[],"MaximumCapacity":61,"WaitListCapacity":20,"WaitListSpotsLeft":20,"CanNotBook":false,"Prices":[{"Id":"cdfa1b47-a0cc-424c-9879-f466d423d51a","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"d7c43d76-0e19-49a4-a44c-e8947637751c","Amount":0.0,"PriceTypeId":"626e6f49-5530-4464-a675-2e3287f9b397","Name":"Resident","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"No fee","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"Free","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"No Tax","AnyTaxesAssigned":false,"IncludeTaxFlagEnabled":false,"WasCalculatedUsingMultipleSlotsLogic":false},{"Id":"27b7466d-f8c6-4b14-a700-af0f46343cf7","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"d7c43d76-0e19-49a4-a44c-e8947637751c","Amount":0.0,"PriceTypeId":"c832ba2c-0723-4915-9947-4d8c1b5e6a7f","Name":"Non-Resident","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"No fee","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"Free","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"No Tax","AnyTaxesAssigned":false,"IncludeTaxFlagEnabled":false,"WasCalculatedUsingMultipleSlotsLogic":false}],"Extras":[],"HasExtras":false,"HasRequiredExtras":false,"HasRestrictions":true,"OwnerId":"3fc86864-e223-47b6-a8ef-0c4e82691340","SupervisorId":null,"RecurrenceId":"1cf0a086-7db8-4c8c-9773-23b42a9eec9b","PaddingBefore":null,"PaddingAfter":null,"OnlineRegistration":true,"UseServiceFee":false,"AdminProrateInfo":{"AutoApplyProrate":true,"ProratedInfoText":null,"NotProratedInfoText":null,"ProrateAfterSessionsNumber":1,"AllowProrateLateRegistation":false,"ProrateSessionsBasedOnDurationEnabled":false},"OnlineProrateInfo":{"ProrateAfterSessionsNumber":1,"AllowProrateLateRegistation":false,"ProrateSessionsBasedOnDurationEnabled":false},"ProrateCoursePermission":false,"IgnoreEventCapacity":false,"EnforceRegistrationsDatesRestrictions":false,"BookOverCapacity":false,"AddAnywayPrerequisites":false,"EventGroupId":null,"EventDates":"Feb 15, 2020 - Feb 16, 2020","CapacityCalculationStrategy":{},"AnyHoldsForCurrentUser":false,"ValidateMembershipOnFee":false,"AllowUndoProratedFeeMembership":false,"ProrateSessionsBasedOnDuration":false,"BookingTypeInfo":{"BookingType":3,"IsSchoolProgram":false,"IsCustomBookingOnline":false,"IsCustomBookingAdmin":false,"IsCustomBooking":false},"DisplayRegistrationDatesSection":false,"EventId":"d7c43d76-0e19-49a4-a44c-e8947637751c","CourseId":"00018868","CourseIdTrimmed":"18868","EventName":"HACKATHON 2020","Details":"The event is a 24-hour hackathon or coding competition where high school students can create whatever they would like from simple HTML websites to complex video games or apps. Participants can win prizes after review from a panel of judges. This event is FREE. There will be free food, free drinks, games and more prizes.\r\n\r\nParticipants must bring their own laptops, sleeping bag, pillow and toiletries.\r\n\r\nThis is a \u0027lock-in\u0027 event. Participants will not be dismissed until 12 p.m. February 16, 2020 or unless their parents or guardians come an pick them up. ","Spots":"13 spot(s) left","OccurrenceDate":null,"BookButtonText":"Register","BookButtonDescription":"Register HACKATHON 2020","Instructor":{"Id":"bfadab03-a010-4636-ad52-bb302cf2d153","FullName":"Julian Mireles","Type":"","Description":"","Image":"","Email":"jmireles@cityofpleasantonca.gov"},"Facility":"","DisplaySettings":{"DisplayInstructorsName":true,"DisplayPrices":true,"DisplaySpotsLeft":true,"DisplayRegistrationDate":true,"DisplayNumberOfSessions":true,"DisplayCourseId":true,"DisplayAgeRestrictions":true,"DisplayRankRestrictions":false,"DisplayGenderRestrictions":true,"ButtonName":"Register","ClosedButtonName":""},"PriceRange":null,"AllDayEvent":false,"AnyTimeBrokenOccurrences":false,"StartDateValue":"2020-02-15T12:00:00","FormattedStartDate":"Feb 15th","FormattedStartTime":"12:00PM","EndDateValue":"2020-02-16T12:00:00","FormattedEndDate":"Feb 16th","FormattedEndTime":"12:00PM","EventTimeDescription":"12:00pm - 12:00pm","AlternativeLocation":null,"HasAlternativeLocation":false,"OccurrenceDescription":"Once","Occurrences":[{"StartDateWithOffset":"2020-02-15T12:00:00-08:00","StartDate":"2020-02-15T00:00:00","EndDateWithOffset":"2020-02-16T12:00:00-08:00","EndDate":"2020-02-16T00:00:00","OccurrenceOrderNumber":0,"DurationInMinutes":1440}],"NumberOfSessions":1,"PrerequisiteEvents":0,"PrerequisiteServices":0,"DisplayablePrerequisiteEventsRestrictionsForCourses":"","DisplayableRestrictionsForCourses":"Age: 14 to 18, Co-ed","MinAge":14,"MinAgeMonths":null,"MaxAge":18,"MaxAgeMonths":null,"AgeRestrictions":"14 to 18","GenderRestrictions":"Co-ed","RankRestrictions":"","FromRank":null,"ToRank":null,"DurationInMinutes":1440,"OrgLogo":"//az12497.vo.msecnd.net/98b40adca4fb480b8eb6c883e3e7ae47/logo/city-of-pleasanton-ca-logo.png","OrgIsSingleLocation":false,"OrgLegalName":"City of Pleasanton","OrgName":"City of Pleasanton","Address":{"AddressTag":"Senior Center","Street":"5353 Sunol Blvd.","City":"Pleasanton ","PostalCode":"94566","CountryId":0,"Country":"United States","StateProvinceId":0,"AnyFieldMissing":true},"Location":"Senior Center","BookingType":3});
+
+        var itemsLoaded = 0;
+        var allItemsCount = 1;
+        var isAdmin = false;
+
+        $(document).ready(function () {
+
+            require(["BookMe4AttendanceHeader", "BookMe4SearchHelper", "PlannerUtility"], function (header, BookMe4SearchHelper, plannerUtility) {
+                header.header();
+
+                    $('#prerequisiteEvents,#prerequisiteServices').click(function () {
+                        var prerequisiteEventsUrl = 'https://cityofpleasanton.perfectmind.com/22971/Clients/BookMe4/PrerequisiteEventsView';
+                        plannerUtility.showPrerequisiteEvents('d7c43d76-0e19-49a4-a44c-e8947637751c', prerequisiteEventsUrl);
+                    });
+
+                    var orgLogoTemplate = kendo.template($('#booking-event-logo').html());
+                    var orgLogoAddressTemplate = kendo.template($('#booking-event-logo-address').html());
+
+                
+                $('.bm-course-primary-content').before(orgLogoTemplate(eventInfo));
+                    
+                    $(orgLogoAddressTemplate(eventInfo)).appendTo('.bm-org-name');
+                    
+
+                        var btnTemplate = kendo.template($('#book-button').html());
+                        var commonRestrictionsSection = $('.common-restrictions');
+                        var mainBookingRestrictionsSection = $('.bm-booking-info.bm-restrictions');
+                        if (commonRestrictionsSection.length > 0) {
+                            commonRestrictionsSection.before(btnTemplate(eventInfo));
+                        } else {
+                            mainBookingRestrictionsSection.prepend(btnTemplate(eventInfo));
+                        }
+
+                        var showRegistrationRestrictionPopUp = function (registrationEndDateLabel) {
+                            var message = $('<span role="alert"></span>').text("The Registration has ended on " + registrationEndDateLabel);
+                            $("#registrationRestrictionAlertPopup").append(message);
+                            $("#registrationRestrictionAlertPopup").show();
+                        };
+
+                        $('.bm-booking-info .bm-book-button').click(function () {
+                            var registrationEndDate = new Date(new Date(eventInfo.RegistrationEndDateInEventTimeZone).getTime() + new Date().getTimezoneOffset() * 60000);
+
+                            // After clicking on Book button we should check if registration end date is not reached.
+                            // Otherwise we should disable "Book" button and then generate alert with appropriate message.
+                            if (registrationEndDate < new Date()) {
+                                showRegistrationRestrictionPopUp(eventInfo.FormattedRegistrationEndDate);
+                                $('.bm-book-button').attr("disabled", "disabled").addClass("disabled");
+                                $('.bm-booking-info .reg-info').text('Registration is closed.');
+
+                                // Returning here false we prevent normal click action for this link - redirect to next page (either Login or Attendee page).
+                                return false;
+                            }
+                        });
+
+                        $("#registrationRestrictionAlertPopup").click(function () {
+                            $("#registrationRestrictionAlertPopup").hide();
+                        });
+
+                        if (eventInfo.IsRegistrationClosed) {
+                            $('.bm-book-button').attr("disabled", "disabled").addClass("disabled");
+                        }
+
+                        var locationTemplate = kendo.template($('#booking-event-location').html());
+                        $('.bm-course-about .bm-location-map').append(locationTemplate(eventInfo));
+
+                        // Initialize google maps actually
+                        var addressForMap = $(orgLogoAddressTemplate(eventInfo)).text();
+                        initializeMapping(eventInfo.HasAlternativeLocation ? eventInfo.AlternativeLocation : addressForMap);
+
+                        $('#load-more').click(function () {
+                            showMore(itemsLoaded);
+                        });
+
+                        $('#load-more').keydown(function (event) {
+                            if (event.keyCode == 13) {
+                                $('#load-more').click();
+                                $('#SimilarEventsGrid tbody').focus();
+                            }
+                        });
+
+                        showMore(itemsLoaded);
+
+                $("#SimilarEventsGrid tbody").attr("tabindex", "0");
+
+                var searchQuery = '';
+
+                if (searchQuery) {
+                    var searchHelper = new BookMe4SearchHelper({
+                        url: 'https://cityofpleasanton.perfectmind.com/22971/Clients/BookMe4Search',
+                        widgetId: '15f6af07-39c5-473e-b053-96653f77a406'
+                    });
+
+                    var backButton = $('.bm-course-primary-content .bm-back-button');
+                    backButton.removeAttr('href');
+                    backButton.click(function () {
+                        searchHelper.postSearchForm(searchQuery, false, true);
+                    });
+                }
+            });
+
+            if (typeof addthis !== 'undefined' && addthis && addthis.addEventListener && typeof addthis.addEventListener === 'function'){
+                addthis.addEventListener('addthis.ready', function(){
+                    setTimeout(function(){
+                        $('#at4-thankyou #at4-palogo').replaceWith('<div id="at4-palogo">' + $('target').html() +'</div>');
+                        $('#service-icons-0').appendTo($('head'));
+                        $('#at-share-dock a svg').removeAttr('title').removeAttr('alt');
+                    }, 1000);                    
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://cityofpleasanton.perfectmind.com/Scripts/BookMe4/google.maps.js?01230607"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#temp_wrapper").fadeOut();
+            });
+        </script>
+        
+        <script src="https://cityofpleasanton.perfectmind.com/Scripts/perfectMind/Planner/PlannerAttendanceHeader.js"></script>
+        <script src="https://cityofpleasanton.perfectmind.com/Scripts/BookMe4/BookMe4AttendanceHeader.js"></script>
+        <script src="https://cityofpleasanton.perfectmind.com/Scripts/jQueryPlugin/lightbox.js?01230607"></script>
+        <div id="tempInfoForScreenReaders" class="hidden-label" aria-live="polite"></div>
+    ﻿
+<form action="https://cityofpleasanton.perfectmind.com/22971/Clients/BookMe4LandingPages/CoursesLandingPage" id="AjaxAntiForgeryForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="3_ZhRp_yV5lo6S4y8PnOqv9zntZdaGobiiP1mPkOInk3uY41Kpbiy12d48t6vaVqH_AqS00v-QnyARCqgNGBaBbowUmU_jwh3ErUKXaAwkxJ71Kutzl0oM0j2FEMTsyS6iyvRitGSaZpQbbFXiKv9zQ93-o1" /></form>
+<script type="text/javascript" src="https://cityofpleasanton.perfectmind.com/Scripts/perfectMind/AjaxAntiForgeryPost.js?01230607"></script>
+    </body>
+</html>
